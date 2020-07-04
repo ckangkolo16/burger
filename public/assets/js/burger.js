@@ -16,9 +16,9 @@ $(function () {
     });
   });
 
-  $(".eatburger").on("click", function (event) {
+  $("body").on("click", ".eatburger", function (event) {
     event.preventDefault();
-
+    console.log("click here");
     const id = $(this).data("id");
     const devouredState = {
       devoured: true,
