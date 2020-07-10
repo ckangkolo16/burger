@@ -1,0 +1,27 @@
+li {
+  padding: 5px;
+  margin: 5px;
+}
+
+body {
+  background-color: #ffcb68;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 200px;
+  margin: 100px auto 0;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 8px orange;
+  margin: 10px auto 0;
+  color: red;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+}

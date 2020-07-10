@@ -1,7 +1,17 @@
+
+
+
 {{#each burgers}}
+{{!-- {{#unless devoured}} --}}
 
 <div>
+    <ul>
+    <li>
     {{this.burger_name}}
-    <button class="eatburger" data-id="{{this.id}}">Eat It </button>
+    <button class="eatburger" data-id="{{this.id}}">Devour Burger </button>
+    </li>
+     
+
+    </ul>
 </div>
 {{/each}}
