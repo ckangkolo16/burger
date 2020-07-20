@@ -1,17 +1,52 @@
+<div class="container">
+
+  
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside"><h1><strong>Burgers Added</strong></h1>
+                    <br><br>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fas fa-teeth-open"></span>DEVOUR</button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside"><h1><strong>Burgers Eaten</h1></strong>
+                    <br><br>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
 
 
 
-{{#each burgers}}
-{{!-- {{#unless devoured}} --}}
+                </div>
+            </div>
+        </div>
 
-<div>
-    <ul>
-    <li>
-    {{this.burger_name}}
-    <button class="eatburger" data-id="{{this.id}}">Devour Burger </button>
-    </li>
-     
-
-    </ul>
+    </div>
+    <!--endrow -->
 </div>
-{{/each}}
+<!--endcontainer -->
